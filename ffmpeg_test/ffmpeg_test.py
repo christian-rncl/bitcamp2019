@@ -4,7 +4,6 @@ from shutil import rmtree
 
 def createPath(s):
     #assert (not os.path.exists(s)), "The filepath "+s+" already exists. Don't want to overwrite it. Aborting."
-
     try:  
         os.mkdir(s)
     except OSError:  
