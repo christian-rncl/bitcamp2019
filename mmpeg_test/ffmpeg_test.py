@@ -12,10 +12,10 @@ def createPath(s):
 
 
 for filename in os.listdir('test_data'):
-    path_name = filename + '_frames'
-    
+    path_name = 'test_data_frames/' + filename + '_frames'
+
     if not os.path.exists(path_name):
         createPath(path_name)
 
-        command = 'ffmpeg -i ' + i + ' -qscale:v 2 ' + path_name + '/frame%03d.jpg'
+        command = 'ffmpeg -i test_data/' + filename + ' -qscale:v 2 ' + path_name + '/frame%03d.jpg'
         subprocess.call(command, shell=True)
