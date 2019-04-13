@@ -6,20 +6,19 @@ import os
 from sys import platform
 import argparse
 import time
-
+import numpy as np
 # Import Openpose (Windows/Ubuntu/OSX)
 dir_path = os.path.dirname(os.path.realpath(__file__))
 try:
     # Windows Import
     if platform == "win32":
         # Change these variables to point to the correct folder (Release/x64 etc.)
-        sys.path.append(dir_path + '/../../python/openpose/Release')
-        os.environ['PATH'] = os.environ['PATH'] + ';' + dir_path + \
-            '/../../x64/Release;' + dir_path + '/../../bin;'
+        sys.path.append(dir_path + '/../../python/openpose/Release');
+        os.environ['PATH']  = os.environ['PATH'] + ';' + dir_path + '/../../x64/Release;' +  dir_path + '/../../bin;'
         import pyopenpose as op
     else:
         # Change these variables to point to the correct folder (Release/x64 etc.)
-        sys.path.append('../../python')
+        sys.path.append('../../python');
         # If you run `make install` (default path is `/usr/local/python` for Ubuntu), you can also access the OpenPose/python module from there. This will install OpenPose and the python library at your desired installation path. Ensure that this is in your python path in order to use it.
         # sys.path.append('/usr/local/python')
         from openpose import pyopenpose as op
@@ -29,10 +28,8 @@ except ImportError as e:
 
 # Flags
 parser = argparse.ArgumentParser()
-parser.add_argument("--image_dir", default="../../../examples/media/",
-                    help="Process a directory of images. Read all standard formats (jpg, png, bmp, etc.).")
-parser.add_argument("--no_display", default=False,
-                    help="Enable to disable the visual display.")
+parser.add_argument("--image_dir", default="../../../examples/media/", help="Process a directory of images. Read all standard formats (jpg, png, bmp, etc.).")
+parser.add_argument("--no_display", default=False, help="Enable to disable the visual display.")
 args = parser.parse_known_args()
 
 # Custom Params (refer to include/openpose/flags.hpp for more parameters)
@@ -40,22 +37,18 @@ params = dict()
 params["model_folder"] = "../../../models/"
 params["hand"] = True
 params["number_people_max"] = 1
-# params["face"] = False
+
 # Add others in path?
-# for i in range(0, len(args[1])):
-#     curr_item = args[1][i]
-#     if i != len(args[1])-1:
-#         next_item = args[1][i+1]
-#     else:
-#         next_item = "1"
-#     if "--" in curr_item and "--" in next_item:
-#         key = curr_item.replace('-', '')
-#         if key not in params:
-#             params[key] = "1"
-#     elif "--" in curr_item and "--" not in next_item:
-#         key = curr_item.replace('-', '')
-#         if key not in params:
-#             params[key] = next_item
+for i in range(0, len(args[1])):
+    curr_item = args[1][i]
+    if i != len(args[1])-1: next_item = args[1][i+1]
+    else: next_item = "1"
+    if "--" in curr_item and "--" in next_item:
+        key = curr_item.replace('-','')
+        if key not in params:  params[key] = "1"
+    elif "--" in curr_item and "--" not in next_item:
+        key = curr_item.replace('-','')
+        if key not in params: params[key] = next_item
 
 # Construct it from system arguments
 # op.init_argv(args[1])
@@ -67,25 +60,28 @@ opWrapper.configure(params)
 opWrapper.start()
 
 # Read frames on directory
-imagePaths = op.get_images_on_directory(args[0].image_dir)
+imagePaths = op.get_images_on_directory(args[0].image_dir);
+print(imagePaths)
 start = time.time()
 
 # Process and display images
-cap = cv2.VideoCapture(0)
-
-while(True):
+for imagePath in imagePaths:
     datum = op.Datum()
-    ret, imageToProcess = cap.read()
+    imageToProcess = cv2.imread(imagePath)
     datum.cvInputData = imageToProcess
     opWrapper.emplaceAndPop([datum])
-
-    print("Body keypoints: \n" + str(datum.poseKeypoints))
-    print("Left hand keypoints: \n" + str(datum.handKeypoints[0]))
-    print("Right hand keypoints: \n" + str(datum.handKeypoints[1]))
-    cv2.imshow("OpenPose 1.4.0 - Tutorial Python API", datum.cvOutputData)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    print(os.path.basename(imagePath) + '\n')
+  
+    # print("Body keypoints: \n" + str(datum.poseKeypoints.flatten()))
+    # print("Left hand keypoints: \n" + str(datum.handKeypoints[0]))
+    # print("Right hand keypoints: \n" + str(datum.handKeypoints[1]))
+    out = np.concatenate((datum.poseKeypoints.flatten(), datum.handKeypoints[0].flatten(), datum.handKeypoints[1].flatten()))
+    # print(datum.cvOutputData)
+    np.savetxt(imagePath + '.txt', out)
+    if not args[0].no_display:
+        cv2.imshow("OpenPose 1.4.0 - Tutorial Python API", datum.cvOutputData)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
 end = time.time()
-print("OpenPose demo successfully finished. Total time: " +
-      str(end - start) + " seconds")
+print("OpenPose demo successfully finished. Total time: " + str(end - start) + " seconds")
