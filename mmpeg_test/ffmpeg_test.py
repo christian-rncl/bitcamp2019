@@ -17,17 +17,14 @@ def deletePath(s):
         print ("Deletion of the directory %s failed" % s)
         print(OSError)
 
-path_name = 'frames'
-input_files = ['cat.mp4']
 
-index = 1
-for i in input_files:
-    if os.path.exists(path_name+str(index)):
-        deletePath(path_name+str(index))
 
-    createPath(path_name+str(index))
+for filename in os.listdir('test_data'):
+    path_name = filename + '_frames'
+    if os.path.exists(path_name):
+        deletePath(path_name)
 
-    command = 'ffmpeg -i ' + i + ' -qscale:v 2 '+path_name+str(index)+'/frame%03d.jpg'
+    createPath(path_name)
+
+    command = 'ffmpeg -i ' + i + ' -qscale:v 2 ' + path_name + '/frame%03d.jpg'
     subprocess.call(command, shell=True)
-
-    index += 1
