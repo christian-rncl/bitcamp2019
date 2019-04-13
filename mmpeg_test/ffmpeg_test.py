@@ -18,12 +18,16 @@ def deletePath(s):
         print(OSError)
 
 path_name = 'frames'
-input_file = 'cat.mp4'
+input_files = ['cat.mp4']
 
-if os.path.exists(path_name):
-    deletePath(path_name)
+index = 1
+for i in input_files:
+    if os.path.exists(path_name+str(index)):
+        deletePath(path_name+str(index))
 
-createPath(path_name)
+    createPath(path_name+str(index))
 
-command = 'ffmpeg -i ' + input_file + ' -qscale:v 2 frames/frame%03d.jpg'
-subprocess.call(command, shell=True)
+    command = 'ffmpeg -i ' + i + ' -qscale:v 2 '+path_name+str(index)+'/frame%03d.jpg'
+    subprocess.call(command, shell=True)
+
+    index += 1
