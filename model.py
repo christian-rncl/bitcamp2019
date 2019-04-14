@@ -36,4 +36,4 @@ class SignToText(nn.Module):
         init.xavier_normal(self.rnn_bn)
         init.xavier_normal(self.decoder)
 
-    def forward()
+    def forward(X):
