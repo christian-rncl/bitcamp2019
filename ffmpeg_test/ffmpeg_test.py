@@ -51,3 +51,13 @@ for filename in os.listdir('test_data/music_on'):
 
         command = 'ffmpeg -i test_data/music_on/' + filename + ' -qscale:v 2 ' + path_name + '/%04d.jpg'
         subprocess.call(command, shell=True)
+
+for filename in os.listdir('test_data/empty'):
+    path_name = 'test_data_frames/empty/' + filename
+
+    if not os.path.exists(path_name):
+        createPath(path_name)
+
+        command = 'ffmpeg -i test_data/empty/' + filename + ' -qscale:v 2 ' + path_name + '/%04d.jpg'
+        subprocess.call(command, shell=True)
+
