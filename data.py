@@ -8,4 +8,4 @@ from sklearn.model_selection import train_test_split
 
 class Generator:
 
-    def __init__
+    def __init_
