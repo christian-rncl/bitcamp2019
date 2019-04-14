@@ -14,14 +14,16 @@ def load_img(filepath):
     y, _, _ = img.split()
     return y
 
+
 class Sign:
     def __init__(self, signdir, label, transforms=None):
-        self.filenames = [join(signdir, x) for x in listdir(signdir) if is_image_file(x)]
+        self.filenames = [join(signdir, x)
+                          for x in listdir(signdir) if is_image_file(x)]
         self. label = label
         self.transforms = transforms
 
     def get_sign(self):
-        seq =[]
+        seq = []
         seq = [load_img(img) for img in self.filenames]
 
         for img in self.filenames:
@@ -31,6 +33,7 @@ class Sign:
                 seq.append(load_img(img))
 
         return seq, self.label
+
 
 class DatasetFromFolder(data.Dataset):
     def __init__(self, dir, transforms=None):
@@ -42,9 +45,9 @@ class DatasetFromFolder(data.Dataset):
         signs = []
         for signdir in listdir(dir):
             signdir = join(dir, signdir)
-            label = dir.split('/')[-2] 
+            label = dir.split('/')[-2]
             signs.append(Sign(signdir, label, transforms=transforms))
-        
+
         return signs
 
     def __getitem__(self, index):
