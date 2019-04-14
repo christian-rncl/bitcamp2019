@@ -1,0 +1,175 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Corpus	../word_language_model/data.py	/^class Corpus(object):$/;"	kind:class	line:20
+DatasetFromFolder	../dataset.py	/^class DatasetFromFolder(data.Dataset):$/;"	kind:class	line:38
+Dictionary	../word_language_model/data.py	/^class Dictionary(object):$/;"	kind:class	line:5
+RNNModel	../word_language_model/model.py	/^class RNNModel(nn.Module):$/;"	kind:class	line:3
+Sign	../data.py	/^class Sign:$/;"	kind:class	line:11
+Sign	../dataset.py	/^class Sign:$/;"	kind:class	line:18
+SignDataset	../data.py	/^class SignDataset(Dataset):$/;"	kind:class	line:31
+SignToText	../model.py	/^class SignToText(nn.Module):$/;"	kind:class	line:83
+SignsGenerator	../data.py	/^class SignsGenerator():$/;"	kind:class	line:42
+SigntoText	../model.py	/^class SigntoText(nn.Module):$/;"	kind:class	line:5
+__getitem__	../data.py	/^    def __getitem__(self, idx):$/;"	kind:member	line:36
+__getitem__	../dataset.py	/^    def __getitem__(self, index):$/;"	kind:member	line:53
+__init__	../data.py	/^    def __init__(self, dir, trn_pct, val_pct, tst_pct, bs):$/;"	kind:member	line:44
+__init__	../data.py	/^    def __init__(self, signdir, label, transforms=None):$/;"	kind:member	line:12
+__init__	../data.py	/^    def __init__(self, signs):$/;"	kind:member	line:33
+__init__	../dataset.py	/^    def __init__(self, dir, transforms=None):$/;"	kind:member	line:39
+__init__	../dataset.py	/^    def __init__(self, signdir, label, transforms=None):$/;"	kind:member	line:19
+__init__	../model.py	/^    def __init__(self, n_in, enc_h, rnn_h, n_rnnlayers, n_signs, dropout=0.2):$/;"	kind:member	line:85
+__init__	../model.py	/^    def __init__(self, nclasses, ninp, nhid, nlayers, dropout=0.5):$/;"	kind:member	line:8
+__init__	../word_language_model/data.py	/^    def __init__(self):$/;"	kind:member	line:6
+__init__	../word_language_model/data.py	/^    def __init__(self, path):$/;"	kind:member	line:21
+__init__	../word_language_model/model.py	/^    def __init__(self, rnn_type, ntoken, ninp, nhid, nlayers, dropout=0.5, tie_weights=False):$/;"	kind:member	line:6
+__len__	../data.py	/^    def __len__(self):$/;"	kind:member	line:39
+__len__	../dataset.py	/^    def __len__(self):$/;"	kind:member	line:56
+__len__	../word_language_model/data.py	/^    def __len__(self):$/;"	kind:member	line:16
+add_word	../word_language_model/data.py	/^    def add_word(self, word):$/;"	kind:member	line:10
+args	../main.py	/^args = parser.parse_args()$/;"	kind:variable	line:39
+args	../txt.py	/^args = parser.parse_known_args()$/;"	kind:variable	line:33
+args	../word_language_model/generate.py	/^args = parser.parse_args()$/;"	kind:variable	line:33
+args	../word_language_model/main.py	/^args = parser.parse_args()$/;"	kind:variable	line:48
+batchify	../word_language_model/main.py	/^def batchify(data, bsz):$/;"	kind:function	line:76
+best_val_loss	../main.py	/^            best_val_loss = val_loss$/;"	kind:variable	line:171
+best_val_loss	../main.py	/^best_val_loss = None$/;"	kind:variable	line:154
+best_val_loss	../word_language_model/main.py	/^            best_val_loss = val_loss$/;"	kind:variable	line:208
+best_val_loss	../word_language_model/main.py	/^best_val_loss = None$/;"	kind:variable	line:191
+command	../ffmpeg_test/ffmpeg_test.py	/^        command = 'ffmpeg -i test_data\/down\/' + filename + ' -qscale:v 2 ' + path_name + '\/%04d.jpg'$/;"	kind:variable	line:43
+command	../ffmpeg_test/ffmpeg_test.py	/^        command = 'ffmpeg -i test_data\/empty\/' + filename + ' -qscale:v 2 ' + path_name + '\/%04d.jpg'$/;"	kind:variable	line:61
+command	../ffmpeg_test/ffmpeg_test.py	/^        command = 'ffmpeg -i test_data\/music_on\/' + filename + ' -qscale:v 2 ' + path_name + '\/%04d.jpg'$/;"	kind:variable	line:52
+command	../ffmpeg_test/ffmpeg_test.py	/^        command = 'ffmpeg -i test_data\/off\/' + filename + ' -qscale:v 2 ' + path_name + '\/%04d.jpg'$/;"	kind:variable	line:25
+command	../ffmpeg_test/ffmpeg_test.py	/^        command = 'ffmpeg -i test_data\/random\/' + filename + ' -qscale:v 2 ' + path_name + '\/%04d.jpg'$/;"	kind:variable	line:70
+command	../ffmpeg_test/ffmpeg_test.py	/^        command = 'ffmpeg -i test_data\/up\/' + filename + ' -qscale:v 2 ' + path_name + '\/%04d.jpg'$/;"	kind:variable	line:34
+corpus	../word_language_model/generate.py	/^corpus = data.Corpus(args.data)$/;"	kind:variable	line:50
+corpus	../word_language_model/main.py	/^corpus = data.Corpus(args.data)$/;"	kind:variable	line:62
+createPath	../ffmpeg_test/ffmpeg_test.py	/^def createPath(s):$/;"	kind:function	line:4
+criterion	../main.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:60
+criterion	../word_language_model/main.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:97
+curr_item	../txt.py	/^    curr_item = args[1][i]$/;"	kind:variable	line:43
+data.py	../data.py	1;"	kind:file	line:1
+data.py	../word_language_model/data.py	1;"	kind:file	line:1
+dataset.py	../dataset.py	1;"	kind:file	line:1
+datum	../txt.py	/^    datum = op.Datum()$/;"	kind:variable	line:69
+device	../main.py	/^device = torch.device("cuda" if args.cuda else "cpu")$/;"	kind:variable	line:47
+device	../word_language_model/generate.py	/^device = torch.device("cuda" if args.cuda else "cpu")$/;"	kind:variable	line:41
+device	../word_language_model/main.py	/^device = torch.device("cuda" if args.cuda else "cpu")$/;"	kind:variable	line:56
+dir_path	../txt.py	/^dir_path = os.path.dirname(os.path.realpath(__file__))$/;"	kind:variable	line:11
+end	../txt.py	/^end = time.time()$/;"	kind:variable	line:86
+epoch_start_time	../main.py	/^        epoch_start_time = time.time()$/;"	kind:variable	line:159
+epoch_start_time	../word_language_model/main.py	/^        epoch_start_time = time.time()$/;"	kind:variable	line:196
+eval_batch_size	../word_language_model/main.py	/^eval_batch_size = 10$/;"	kind:variable	line:85
+evaluate	../main.py	/^def evaluate(data_source):$/;"	kind:function	line:91
+evaluate	../word_language_model/main.py	/^def evaluate(data_source):$/;"	kind:function	line:128
+export_onnx	../main.py	/^def export_onnx(path, batch_size, seq_len):$/;"	kind:function	line:143
+export_onnx	../word_language_model/main.py	/^def export_onnx(path, batch_size, seq_len):$/;"	kind:function	line:180
+ffmpeg_test.py	../ffmpeg_test/ffmpeg_test.py	1;"	kind:file	line:1
+forward	../model.py	/^    def forward(X):/;"	kind:member	line:103
+forward	../model.py	/^    def forward(self, input, hidden):$/;"	kind:member	line:37
+forward	../word_language_model/model.py	/^    def forward(self, input, hidden):$/;"	kind:member	line:44
+generate.py	../word_language_model/generate.py	1;"	kind:file	line:1
+getSequential	../model.py	/^def getSequential(n_in, enc_h, rnn_h, n_rnnlayers, n_signs, dropout=0.2):$/;"	kind:function	line:54
+getTrainLoader	../data.py	/^    def getTrainLoader(self):$/;"	kind:member	line:68
+get_batch	../main.py	/^def get_batch(source, i):$/;"	kind:function	line:84
+get_batch	../word_language_model/main.py	/^def get_batch(source, i):$/;"	kind:function	line:121
+get_sign	../dataset.py	/^    def get_sign(self):$/;"	kind:member	line:25
+help	../main.py	/^                    help='batch size')$/;"	kind:variable	line:26
+help	../main.py	/^                    help='dropout applied to layers (0 = no dropout)')$/;"	kind:variable	line:30
+help	../main.py	/^                    help='gradient clipping')$/;"	kind:variable	line:22
+help	../main.py	/^                    help='initial learning rate')$/;"	kind:variable	line:20
+help	../main.py	/^                    help='location of the data corpus')$/;"	kind:variable	line:14
+help	../main.py	/^                    help='number of hidden units per layer')$/;"	kind:variable	line:16
+help	../main.py	/^                    help='number of layers')$/;"	kind:variable	line:18
+help	../main.py	/^                    help='path to save the final model')$/;"	kind:variable	line:38
+help	../main.py	/^                    help='random seed')$/;"	kind:variable	line:32
+help	../main.py	/^                    help='report interval')$/;"	kind:variable	line:36
+help	../main.py	/^                    help='sequence length')$/;"	kind:variable	line:28
+help	../main.py	/^                    help='upper epoch limit')$/;"	kind:variable	line:24
+help	../main.py	/^                    help='use CUDA')$/;"	kind:variable	line:34
+help	../word_language_model/generate.py	/^                    help='location of the data corpus')$/;"	kind:variable	line:18
+help	../word_language_model/generate.py	/^                    help='model checkpoint to use')$/;"	kind:variable	line:20
+help	../word_language_model/generate.py	/^                    help='number of words to generate')$/;"	kind:variable	line:24
+help	../word_language_model/generate.py	/^                    help='output file for generated text')$/;"	kind:variable	line:22
+help	../word_language_model/generate.py	/^                    help='random seed')$/;"	kind:variable	line:26
+help	../word_language_model/generate.py	/^                    help='reporting interval')$/;"	kind:variable	line:32
+help	../word_language_model/generate.py	/^                    help='temperature - higher will increase diversity')$/;"	kind:variable	line:30
+help	../word_language_model/generate.py	/^                    help='use CUDA')$/;"	kind:variable	line:28
+help	../word_language_model/main.py	/^                    help='batch size')$/;"	kind:variable	line:31
+help	../word_language_model/main.py	/^                    help='dropout applied to layers (0 = no dropout)')$/;"	kind:variable	line:35
+help	../word_language_model/main.py	/^                    help='initial learning rate')$/;"	kind:variable	line:25
+help	../word_language_model/main.py	/^                    help='location of the data corpus')$/;"	kind:variable	line:15
+help	../word_language_model/main.py	/^                    help='number of hidden units per layer')$/;"	kind:variable	line:21
+help	../word_language_model/main.py	/^                    help='number of layers')$/;"	kind:variable	line:23
+help	../word_language_model/main.py	/^                    help='path to export the final model in onnx format')$/;"	kind:variable	line:47
+help	../word_language_model/main.py	/^                    help='path to save the final model')$/;"	kind:variable	line:45
+help	../word_language_model/main.py	/^                    help='random seed')$/;"	kind:variable	line:39
+help	../word_language_model/main.py	/^                    help='report interval')$/;"	kind:variable	line:43
+help	../word_language_model/main.py	/^                    help='sequence length')$/;"	kind:variable	line:33
+help	../word_language_model/main.py	/^                    help='size of word embeddings')$/;"	kind:variable	line:19
+help	../word_language_model/main.py	/^                    help='tie the word embedding and softmax weights')$/;"	kind:variable	line:37
+help	../word_language_model/main.py	/^                    help='type of recurrent net (RNN_TANH, RNN_RELU, LSTM, GRU)')$/;"	kind:variable	line:17
+help	../word_language_model/main.py	/^                    help='upper epoch limit')$/;"	kind:variable	line:29
+help	../word_language_model/main.py	/^                    help='use CUDA')$/;"	kind:variable	line:41
+hidden	../word_language_model/generate.py	/^hidden = model.init_hidden(1)$/;"	kind:variable	line:52
+imagePaths	../txt.py	/^imagePaths = op.get_images_on_directory(args[0].image_dir);$/;"	kind:variable	line:63
+imageToProcess	../txt.py	/^    imageToProcess = cv2.imread(imagePath)$/;"	kind:variable	line:70
+init_hidden	../model.py	/^    def init_hidden(self, bsz):$/;"	kind:member	line:45
+init_hidden	../word_language_model/model.py	/^    def init_hidden(self, bsz):$/;"	kind:member	line:51
+init_weights	../model.py	/^    def init_weights(self):$/;"	kind:member	line:30
+init_weights	../model.py	/^    def init_weights(self):$/;"	kind:member	line:97
+init_weights	../word_language_model/model.py	/^    def init_weights(self):$/;"	kind:member	line:38
+input	../word_language_model/generate.py	/^input = torch.randint(ntokens, (1, 1), dtype=torch.long).to(device)$/;"	kind:variable	line:53
+is_image_file	../dataset.py	/^def is_image_file(filename):$/;"	kind:function	line:8
+key	../txt.py	/^        key = curr_item.replace('-','')$/;"	kind:variable	line:47
+key	../txt.py	/^        key = curr_item.replace('-','')$/;"	kind:variable	line:50
+loadSignsDir	../dataset.py	/^    def loadSignsDir(self, dir, transforms):$/;"	kind:member	line:44
+load_img	../dataset.py	/^def load_img(filepath):$/;"	kind:function	line:12
+lr	../main.py	/^lr = args.lr$/;"	kind:variable	line:153
+lr	../word_language_model/main.py	/^lr = args.lr$/;"	kind:variable	line:190
+main.py	../main.py	1;"	kind:file	line:1
+main.py	../word_language_model/main.py	1;"	kind:file	line:1
+model	../main.py	/^    model = torch.load(f)$/;"	kind:variable	line:181
+model	../main.py	/^model = model.RNNModel(args.model, ntokens, args.emsize, args.nhid, args.nlayers, args.dropout, args.tied).to(device)$/;"	kind:variable	line:59
+model	../word_language_model/generate.py	/^    model = torch.load(f).to(device)$/;"	kind:variable	line:47
+model	../word_language_model/main.py	/^    model = torch.load(f)$/;"	kind:variable	line:218
+model	../word_language_model/main.py	/^model = model.RNNModel(args.model, ntokens, args.emsize, args.nhid, args.nlayers, args.dropout, args.tied).to(device)$/;"	kind:variable	line:95
+model.py	../model.py	1;"	kind:file	line:1
+model.py	../word_language_model/model.py	1;"	kind:file	line:1
+ntokens	../main.py	/^ntokens = len(corpus.dictionary)$/;"	kind:variable	line:58
+ntokens	../word_language_model/generate.py	/^ntokens = len(corpus.dictionary)$/;"	kind:variable	line:51
+ntokens	../word_language_model/main.py	/^ntokens = len(corpus.dictionary)$/;"	kind:variable	line:94
+opWrapper	../txt.py	/^opWrapper = op.WrapperPython()$/;"	kind:variable	line:58
+out	../txt.py	/^    out = np.concatenate((datum.poseKeypoints.flatten(), datum.handKeypoints[0].flatten(), datum.handKeypoints[1].flatten()))$/;"	kind:variable	line:78
+params	../txt.py	/^params = dict()$/;"	kind:variable	line:36
+parser	../main.py	/^parser = argparse.ArgumentParser(description='PyTorch Sign to text')$/;"	kind:variable	line:12
+parser	../txt.py	/^parser = argparse.ArgumentParser()$/;"	kind:variable	line:30
+parser	../word_language_model/generate.py	/^parser = argparse.ArgumentParser(description='PyTorch Wikitext-2 Language Model')$/;"	kind:variable	line:14
+parser	../word_language_model/main.py	/^parser = argparse.ArgumentParser(description='PyTorch Wikitext-2 RNN\/LSTM Language Model')$/;"	kind:variable	line:13
+path_name	../ffmpeg_test/ffmpeg_test.py	/^    path_name = 'test_data_frames\/down\/' + filename$/;"	kind:variable	line:38
+path_name	../ffmpeg_test/ffmpeg_test.py	/^    path_name = 'test_data_frames\/empty\/' + filename$/;"	kind:variable	line:56
+path_name	../ffmpeg_test/ffmpeg_test.py	/^    path_name = 'test_data_frames\/music_on\/' + filename$/;"	kind:variable	line:47
+path_name	../ffmpeg_test/ffmpeg_test.py	/^    path_name = 'test_data_frames\/off\/' + filename$/;"	kind:variable	line:20
+path_name	../ffmpeg_test/ffmpeg_test.py	/^    path_name = 'test_data_frames\/random\/' + filename$/;"	kind:variable	line:65
+path_name	../ffmpeg_test/ffmpeg_test.py	/^    path_name = 'test_data_frames\/up\/' + filename$/;"	kind:variable	line:29
+repackage_hidden	../main.py	/^def repackage_hidden(h):$/;"	kind:function	line:66
+repackage_hidden	../word_language_model/main.py	/^def repackage_hidden(h):$/;"	kind:function	line:103
+split_data	../data.py	/^    def split_data(self, trn_pct, val_pct, tst_pct):$/;"	kind:member	line:57
+start	../txt.py	/^start = time.time()$/;"	kind:variable	line:65
+test_data	../word_language_model/main.py	/^test_data = batchify(corpus.test, eval_batch_size)$/;"	kind:variable	line:88
+test_loss	../main.py	/^test_loss = evaluate(test_data)$/;"	kind:variable	line:187
+test_loss	../word_language_model/main.py	/^test_loss = evaluate(test_data)$/;"	kind:variable	line:224
+tokenize	../word_language_model/data.py	/^    def tokenize(self, path):$/;"	kind:member	line:27
+train	../main.py	/^def train():$/;"	kind:function	line:107
+train	../word_language_model/main.py	/^def train():$/;"	kind:function	line:144
+train_data	../word_language_model/main.py	/^train_data = batchify(corpus.train, args.batch_size)$/;"	kind:variable	line:86
+txt.py	../txt.py	1;"	kind:file	line:1
+val_data	../word_language_model/main.py	/^val_data = batchify(corpus.valid, eval_batch_size)$/;"	kind:variable	line:87
+val_loss	../main.py	/^        val_loss = evaluate(val_data)$/;"	kind:variable	line:161
+val_loss	../word_language_model/main.py	/^        val_loss = evaluate(val_data)$/;"	kind:variable	line:198
+word	../word_language_model/generate.py	/^            word = corpus.dictionary.idx2word[word_idx]$/;"	kind:variable	line:62
+word_idx	../word_language_model/generate.py	/^            word_idx = torch.multinomial(word_weights, 1)[0]$/;"	kind:variable	line:60
+word_weights	../word_language_model/generate.py	/^            word_weights = output.squeeze().div(args.temperature).exp().cpu()$/;"	kind:variable	line:59
